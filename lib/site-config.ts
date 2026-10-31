@@ -37,7 +37,7 @@ export const pageCopy = {
     introduction: "From the sidelines to the starting lineup.",
     label: "Our main venture",
     title: ["Fan Arena.", "Built for the fans."],
-    description: "Our flagship venture brings fantasy sports and prediction games to sports audiences, helping publishers, broadcasters, and sports organizations turn fan passion into participation.",
+    description: "Fan Arena brings fantasy sports and prediction games to sports audiences, helping publishers, broadcasters, and sports organizations turn fan passion into participation.",
     highlights: ["Fantasy sports", "Prediction games", "Fan engagement"],
     cta: "Visit FanArena.com",
     illustrationCaption: "Imagined gameplay. Real fan spirit.",
