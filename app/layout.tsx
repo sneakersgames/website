@@ -3,25 +3,18 @@ import localFont from "next/font/local";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
-const displayFont = localFont({
-  src: "./fonts/bricolage-grotesque-latin-variable.woff2",
-  weight: "200 800",
-  style: "normal",
-  variable: "--font-display",
-  display: "swap",
-});
-
-const bodyFont = localFont({
-  src: "./fonts/dm-sans-latin-variable.woff2",
-  weight: "100 1000",
-  style: "normal",
-  variable: "--font-body",
+const studioFont = localFont({
+  src: [
+    { path: "./fonts/ComicNeue-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/ComicNeue-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-studio",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
-  title: "SneakersGames — Serious about sports. Playful about games.",
+  title: "SneakersGames — Indie Sports Game Studio",
   description: siteConfig.description,
   applicationName: siteConfig.name,
   ...(siteConfig.isIndexable ? { alternates: { canonical: "/" } } : {}),
@@ -30,13 +23,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: siteConfig.name,
-    title: "SneakersGames — Sport meets play.",
+    title: "SneakersGames — Indie Sports Game Studio",
     description: siteConfig.description,
     ...(siteConfig.isIndexable ? { url: siteConfig.siteUrl } : {}),
   },
   twitter: {
     card: "summary_large_image",
-    title: "SneakersGames — Sport meets play.",
+    title: "SneakersGames — Indie Sports Game Studio",
     description: siteConfig.description,
   },
 };
@@ -45,7 +38,7 @@ export const viewport: Viewport = { themeColor: "#f8f6ed" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
+    <html lang="en" className={`${studioFont.variable}`}>
       <body>{children}</body>
     </html>
   );

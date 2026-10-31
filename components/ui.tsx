@@ -21,9 +21,9 @@ export function ButtonLink({ children, className = "", variant = "purple", exter
 
 export function Wordmark({ footer = false }: { footer?: boolean }) {
   return (
-    <a href="#top" aria-label="SneakersGames home" className={`wordmark${footer ? " wordmark-footer" : ""}`}>
+    <div className={`wordmark${footer ? " wordmark-footer" : ""}`}>
       <Image src="/sneakersgames-logo.jpeg" width={2752} height={1536} alt="SneakersGames" loading={footer ? "lazy" : "eager"} fetchPriority={footer ? "auto" : "high"} sizes={footer ? "136px" : "160px"} />
-    </a>
+    </div>
   );
 }
 

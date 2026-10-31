@@ -252,3 +252,22 @@ h2 { font-size: clamp(40px, 4.1vw, 57px); line-height: 1.06; letter-spacing: -2.
 }
 @media (max-width: 360px) { .container { width: calc(100% - 32px); } .header-cta { font-size: 9px; padding-inline: 11px; gap: 9px; } .wordmark { width: 116px; } .hero-actions { gap: 14px; } .hero-actions .button { padding-inline: 16px; } .hero .eyebrow { font-size: 7px; } h1 { font-size: 46px; } .venture-card { padding-inline: 21px; } .venture-copy h2 { font-size: 37px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* Minimal studio edition */
+:root { --font-body: var(--font-studio); --font-display: var(--font-studio); }
+.site-header { justify-content: center; }
+.hero { display: block; text-align: center; padding-block: 96px 72px; }
+.hero h1 { max-width: 1100px; margin: 0 auto; color: var(--purple); font-size: clamp(46px, 6.5vw, 88px); letter-spacing: -2px; line-height: 1.08; font-weight: 700; }
+.work-section { padding-top: 24px; }
+h2, h3, .venture-copy h2 { font-weight: 700; letter-spacing: -1px; }
+.site-footer { border-top: 1px solid #deddd3; }
+.footer-brand > span { display: inline; }
+@media (max-width: 600px) {
+  .site-header { padding-block: 12px; }
+  .hero { padding-block: 60px; }
+  .hero h1 { letter-spacing: -1px; }
+  .footer-brand { gap: 10px; }
+  .footer-brand > span { font-size: 10px; }
+  .site-footer { justify-content: center; }
+  .site-footer .text-link { margin-left: 0; }
+}
